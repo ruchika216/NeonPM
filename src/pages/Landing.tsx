@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { useNavigate } from 'react-router-dom'
+import { useThemeStore } from '../store/theme'
 
 interface AuthFormData {
   email: string
@@ -10,6 +11,7 @@ interface AuthFormData {
 
 export default function Landing() {
   const navigate = useNavigate()
+  const { theme, toggleTheme } = useThemeStore()
   const [isLogin, setIsLogin] = useState(true)
   const [formData, setFormData] = useState<AuthFormData>({
     email: '',
@@ -56,14 +58,27 @@ export default function Landing() {
             <span className="h-3 w-3 rounded-full bg-cyan-400 shadow-[0_0_16px_4px_rgba(0,212,255,0.8)]" />
             <span className="text-xl font-bold text-cyan-300">NeonPM</span>
           </motion.div>
-          <motion.button
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            onClick={handleDemoLogin}
-            className="px-4 py-2 rounded-lg border border-cyan-400/50 text-cyan-300 hover:bg-cyan-400/10 transition-colors"
-          >
-            Try Demo
-          </motion.button>
+          
+          <div className="flex items-center gap-3">
+            <motion.button
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              onClick={toggleTheme}
+              className="p-2 rounded-lg border border-cyan-400/50 text-cyan-300 hover:bg-cyan-400/10 transition-colors"
+              aria-label="Toggle theme"
+            >
+              <span className="text-lg">{theme === 'dark' ? '🌙' : '☀️'}</span>
+            </motion.button>
+            
+            <motion.button
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              onClick={handleDemoLogin}
+              className="px-4 py-2 rounded-lg border border-cyan-400/50 text-cyan-300 hover:bg-cyan-400/10 transition-colors"
+            >
+              Try Demo
+            </motion.button>
+          </div>
         </div>
       </nav>
 

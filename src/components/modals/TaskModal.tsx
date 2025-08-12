@@ -92,10 +92,10 @@ export default function TaskModal({ isOpen, onClose }: TaskModalProps) {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0.95 }}
-          className="bg-black/90 backdrop-blur-lg border border-white/10 rounded-2xl p-8 max-w-2xl w-full max-h-[90vh] overflow-y-auto"
+          className="bg-black/90 backdrop-blur-lg border border-white/10 rounded-lg p-4 max-w-md w-full max-h-[80vh] overflow-y-auto"
         >
-          <div className="flex items-center justify-between mb-6">
-            <h2 className="text-2xl font-bold text-cyan-300">Create New Task</h2>
+          <div className="flex items-center justify-between mb-4">
+            <h2 className="text-lg font-bold text-cyan-300">Create New Task</h2>
             <button
               onClick={onClose}
               className="text-gray-400 hover:text-white transition-colors"
@@ -104,10 +104,10 @@ export default function TaskModal({ isOpen, onClose }: TaskModalProps) {
             </button>
           </div>
 
-          <form onSubmit={handleSubmit} className="space-y-6">
+          <form onSubmit={handleSubmit} className="space-y-3">
             {/* Basic Information */}
             <div>
-              <label className="block text-sm font-medium text-gray-300 mb-2">
+              <label className="block text-xs font-medium text-gray-300 mb-1">
                 Task Summary *
               </label>
               <input
@@ -115,7 +115,7 @@ export default function TaskModal({ isOpen, onClose }: TaskModalProps) {
                 required
                 value={formData.title}
                 onChange={(e) => setFormData(prev => ({ ...prev, title: e.target.value }))}
-                className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/20 text-white placeholder-gray-400 focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 focus:outline-none"
+                className="w-full px-3 py-2 text-sm rounded-lg bg-white/5 border border-white/20 text-white placeholder-gray-400 focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 focus:outline-none"
                 placeholder="Enter task summary"
               />
             </div>
