@@ -22,7 +22,7 @@ const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/NeonPM">
       <Routes>
         <Route path="/landing" element={<Landing />} />
         <Route path="/" element={
