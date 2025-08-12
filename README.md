@@ -1,5 +1,7 @@
 # NeonPM – Modern Project Management App (React + Vite + TS + Tailwind v4)
 
+🚀 **Live Demo:** [https://ruchika216.github.io/NeonPM/](https://ruchika216.github.io/NeonPM/)
+
 NeonPM is a modern, responsive project management application inspired by Jira. It includes projects, Kanban tasks with drag-and-drop, meetings and scheduling, chat with group conversations, notifications, people admin, project details (time logs + comments), and global light/dark theming.
 
 ## Table of Contents
@@ -40,6 +42,8 @@ npm run start
 npm run preview
 ```
 
+**💡 Try the live demo:** Visit [https://ruchika216.github.io/NeonPM](https://ruchika216.github.io/NeonPM) and click "Try Demo" to explore all features instantly.
+
 To reset app data, go to Settings → Clear Local Data (or delete the `neonpm-data` key in browser localStorage).
 
 ---
@@ -49,7 +53,7 @@ To reset app data, go to Settings → Clear Local Data (or delete the `neonpm-da
 - Tasks: Kanban columns (To do / In progress / Review / Done) with drag-and-drop across columns; filter by project
 - Meetings: schedule meetings (all-day or timed), meeting types, attendees, recurring options, quick start button
 - Chat: users bar, create 1:1 or group conversations, drag users into conversations, persistent messages per conversation
-- Notifications: recent project/task/meeting/chat activity in header bell menu, “mark all read”
+- Notifications: recent project/task/meeting/chat activity in header bell menu, "mark all read"
 - People (Admin): manage users, edit role/status/title/department, see per-user stats (projects, tasks, hours)
 - Project Details: overview, tasks for that project, time logs (add/delete), comments (add)
 - Theming: global light/dark toggle with CSS variables; smooth transitions, readable dropdowns in both themes
@@ -61,11 +65,32 @@ To reset app data, go to Settings → Clear Local Data (or delete the `neonpm-da
 ## Screens and Workflows
 
 ### Landing & Auth
-- Landing page with hero + auth form; click “Try Demo” to auto-login.
+- Landing page with hero + auth form; click "Try Demo" to auto-login.
+- Theme toggle available on landing page for immediate theme preference
 - Authentication is local (no backend). A user is persisted as `user` in localStorage.
 
-### Dashboard
-- Stats and charts (Recharts), quick actions, communication hub (chat + call placeholders), upcoming meetings, recent activity, recent projects.
+### Dashboard 📊
+The dashboard serves as your command center with comprehensive project insights:
+
+**Analytics & Metrics:**
+- Interactive charts powered by Recharts showing project progress, task distribution, and team performance
+- Key performance indicators: total projects, active tasks, team members, completion rates
+- Visual progress tracking with area charts, pie charts, and bar graphs
+
+**Quick Actions Hub:**
+- One-click access to create new projects, tasks, and meetings
+- Quick navigation to recent activities and urgent items
+- Communication center with integrated chat and video call options
+
+**Activity Overview:**
+- Recent project updates and task completions
+- Upcoming meeting notifications and calendar integration
+- Team activity feed showing who's working on what
+
+**Project Showcase:**
+- Recent projects with progress indicators and quick access buttons
+- Status-based filtering and priority highlighting
+- Direct navigation to project details and team collaboration
 
 ### Projects
 - Search, filter (status, priority), sort (recent/progress/name).
